@@ -40,11 +40,6 @@
     border: 1px solid black;
     cursor: pointer;
 }
-
-.search{
-    padding: 10px;
-}
-
 .res-logo{
     width: 100%;
 }
@@ -54,14 +49,27 @@
     cursor: pointer;
 }
 
-.SearchBox{
-    margin: 10px;
-    justify-content: center;
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+}
+
+.login-btn{
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.filter{
     display: flex;
 }
 
-.search-btn{
+.SearchBox{
     margin: 10px;
-    padding: 10px;
-    font-size: 16px;
 }
