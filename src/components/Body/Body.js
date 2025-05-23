@@ -4,10 +4,10 @@ import resData from "../../utils/mockData";
 import { use, useEffect, useState } from "react";
 import Shimmer from "../Shimmer/Shimmer";
 import { Link } from "react-router";
+import useOnline from "../../utils/useOnline";
 
 const Body = () => {
     const [restroList, setRestroList] = useState([]);
-    console.log(useState(["nikita"]))
     const [filteredRestro, setFilterRestro] = useState([]);
     const [searchText, setSearchText] = useState("");
     const handleSearch = (e) => {
@@ -28,6 +28,12 @@ const Body = () => {
         setFilterRestro(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }
+
+    const onlineStatus = useOnline();
+
+    if (onlineStatus === false)
+        return (<h1>Looks like you're offline!! Please check your internet connection</h1>);
+    
      
     return restroList?.length === 0 ? <Shimmer /> : (
         <div className='body'>
