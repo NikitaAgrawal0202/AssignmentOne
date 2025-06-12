@@ -1,5 +1,5 @@
 
-import ResturantCard from "../RestroCard/ResturantCard";
+import ResturantCard, {withPromotedLabel} from "../RestroCard/ResturantCard";
 import resData from "../../utils/mockData";
 import { use, useEffect, useState } from "react";
 import Shimmer from "../Shimmer/Shimmer";
@@ -30,6 +30,7 @@ const Body = () => {
     }
 
     const onlineStatus = useOnline();
+    const ResturantPromotedCard = withPromotedLabel(ResturantCard);
 
     if (onlineStatus === false)
         return (<h1>Looks like you're offline!! Please check your internet connection</h1>);
@@ -37,27 +38,33 @@ const Body = () => {
      
     return restroList?.length === 0 ? <Shimmer /> : (
         <div className='body'>
-                <div className="filter">
-                <div className="SearchBox">
-                    <input className="search-box" id="search" value={searchText} type="text" onChange={(e) => setSearchText(e.target.value)}/>
-                    <button className="search-btn" onClick={() => {
+                <div className="flex">
+                <div className="m-4 p-4">
+                    <input className="border border-solid border-black" id="search" value={searchText} type="text" onChange={(e) => setSearchText(e.target.value)}/>
+                    <button className="px-4 py-2 rounded-lg bg-green-100 m-4" onClick={() => {
                         const filteredRetroSerachList = restroList?.filter((res) => res?.info?.name.toLowerCase()?.includes(searchText?.toLowerCase()))
                         setFilterRestro(filteredRetroSerachList);
                     }}>
                         Search
                     </button>
                 </div>
-                    <button className="filter-btn" onClick={() => {
+                  <div className="m-4 p-4 flex items-center">
+                      <button className="px-4 py-2 rounded-lg bg-gray-100" onClick={() => {
                       const filteredRestroList =  restroList.filter((res) => res?.info?.avgRating > 4.2)
                       setRestroList(filteredRestroList);
                     }}>Top Rated Resturant</button>
+                  </div>
                 </div>
-            <div className='res-container'>
+            <div className='res-container flex flex-wrap'>
                 {filteredRestro && filteredRestro?.map((restro, index) => (
                    <Link to={"/restaurant/"+restro?.info?.id} key={index}>
+                   {restro?.info?.promoted ? 
+                 <ResturantPromotedCard resData={restro} /> 
+                 : 
                     <ResturantCard
                         resData={restro}
                     />
+                 } 
                     </Link>
                 ))}
             </div>

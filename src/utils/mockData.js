@@ -1001,6 +1001,7 @@ const resData =
                       "info": {
                         "id": "47595",
                         "name": "Pizza Hut",
+                        "promoted": true,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/dbdc2014-faa7-472a-9824-154e073381f6_47595.jpg",
                         "locality": "C Scheme",
                         "areaName": "MI Road",
@@ -1082,6 +1083,7 @@ const resData =
                       "info": {
                         "id": "735127",
                         "name": "Chinese Wok",
+                        "promoted": false,
                         "cloudinaryImageId": "e0839ff574213e6f35b3899ebf1fc597",
                         "locality": "Sodala",
                         "areaName": "Vivek Vihar",
@@ -1170,6 +1172,7 @@ const resData =
                       "info": {
                         "id": "90186",
                         "name": "Burger King",
+                        "promoted": false,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/24/1a9bd45f-b754-4ff3-bc0b-007b136a4501_90186.jpg",
                         "locality": "Amrapali Marg",
                         "areaName": "Vaishali Nagar",
@@ -1265,6 +1268,7 @@ const resData =
                       "info": {
                         "id": "735128",
                         "name": "Big Bowl",
+                        "promoted": true,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/22/30548ac4-2e57-4c1d-ba73-8372f74a1ad2_735128.JPG",
                         "locality": "Siddhi Vinayak Complex",
                         "areaName": "Vivek Vihar",
@@ -1349,6 +1353,7 @@ const resData =
                       "info": {
                         "id": "698741",
                         "name": "Olio - The Wood Fired Pizzeria",
+                        "promoted": false,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/4bcdc62d-965a-49ae-a0aa-85cc798b24b2_698741.jpg",
                         "locality": "SAHAKAR MARG",
                         "areaName": "LAL KOTHI",
@@ -1449,6 +1454,7 @@ const resData =
                       "info": {
                         "id": "697439",
                         "name": "Cheesecake & co.",
+                        "promoted": false,
                         "cloudinaryImageId": "b318c0b4bc2169550145ace1d6e791a2",
                         "locality": "Basement Floor",
                         "areaName": "Lal Kothi",
@@ -1544,6 +1550,7 @@ const resData =
                       "info": {
                         "id": "702121",
                         "name": "Cheesecakes By CakeZone",
+                        "promoted": true,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/13/3283b629-b37d-411b-942b-945c45455ce6_702121.JPG",
                         "locality": "Lal Kothi",
                         "areaName": "Sahakar Marg",
@@ -1643,6 +1650,7 @@ const resData =
                       "info": {
                         "id": "57722",
                         "name": "Dmb(Doodh Misthan Bhandar)",
+                        "promoted": false,
                         "cloudinaryImageId": "mwxhhhmz9gdap5zrcojj",
                         "locality": "Golpark",
                         "areaName": "Bani Park",
@@ -1745,6 +1753,7 @@ const resData =
                       "info": {
                         "id": "249749",
                         "name": "McDonald's",
+                        "promoted": true,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/9/f2ac1fad-bff8-4a78-bc9b-f65567f93906_249749.JPG",
                         "locality": "Civil Lines",
                         "areaName": "Civil Lines",
@@ -1842,6 +1851,7 @@ const resData =
                       "info": {
                         "id": "620980",
                         "name": "Domino's Pizza",
+                        "promoted": false,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/13/8091696b-95cb-4fe6-bd3d-4df081a7f70a_620980.JPG",
                         "locality": "Sawai Jai Singh Road",
                         "areaName": "Sindhi Camp",
@@ -4371,6 +4381,7 @@ const resData =
                       "info": {
                         "id": "735128",
                         "name": "Big Bowl",
+                        "promoted": true,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/22/30548ac4-2e57-4c1d-ba73-8372f74a1ad2_735128.JPG",
                         "locality": "Siddhi Vinayak Complex",
                         "areaName": "Vivek Vihar",
@@ -4473,6 +4484,7 @@ const resData =
                       "info": {
                         "id": "698741",
                         "name": "Olio - The Wood Fired Pizzeria",
+                        "promoted": false,
                         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/4bcdc62d-965a-49ae-a0aa-85cc798b24b2_698741.jpg",
                         "locality": "SAHAKAR MARG",
                         "areaName": "LAL KOTHI",
