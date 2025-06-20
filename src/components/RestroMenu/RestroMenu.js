@@ -7,6 +7,7 @@ import RestaurantCategory from "../RestaurantCategory";
 const RestroMenu = () => {
     const { resId } = useParams();
     const resInfo = useRestrauntMenu(resId);
+    const [showIndex,setShowIndex] = useState(0);
     
     if (resInfo === null) return <Shimmer />;
     const {name, cuisines, costForTwoMessage} = resInfo?.data?.cards[2]?.card?.card?.info;
@@ -20,7 +21,8 @@ const RestroMenu = () => {
             <h1 className="font-bold my-6 text-2xl">{name}</h1>
             <h2 className="font-bold text-lg">{cuisines.join(", ")} - {costForTwoMessage}</h2>
            {categories.map((category, index) => 
-                <RestaurantCategory key={index} data={category?.card?.card}/>
+                <RestaurantCategory key={index} data={category?.card?.card} showItems={index === showIndex ? true : false}
+                setShowIndex={() => setShowIndex(index)}/>
            )}
         </div>
     );
