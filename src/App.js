@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css";
 import Header from './components/Header/Header';
@@ -8,13 +8,25 @@ import About from './components/About/About';
 import ContactUs from './components/Contact/ContactUs';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import RestroMenu from './components/RestroMenu/RestroMenu';
+import User from './components/User';
+import UserContext from './utils/UserContext';
 
 const AppLayout = () => {
+    const [userInfo, setUserInfo] = useState();
+    useEffect(() => {
+        // Simulating an API call to fetch user info   
+        const data = {
+            name: "Nikita Agrawal",
+        } ;
+        setUserInfo(data?.name);
+    }, []);
     return (
+        <UserContext.Provider value={{ loggedInUser: userInfo }}>
         <div className='app'>
             <Header />
             <Outlet />
         </div>
+        </UserContext.Provider>
     )
 }
 

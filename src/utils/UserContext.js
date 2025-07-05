@@ -1,4 +1,5 @@
-const { createContext } = require("react");
+const createContext
+= require('react').createContext;
 
 const UserContext = createContext({
     loggedInUser: "Default User",
